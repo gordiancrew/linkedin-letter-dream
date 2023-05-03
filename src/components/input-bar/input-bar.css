@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(32, 32, 32);
+  background-color: rgb(32, 32, 32);
+}
 .field {
   display: flex;
   flex-direction: column;
@@ -8,6 +12,7 @@
 .search form {
   position: relative;
   margin: 0 auto;
+  color: white;
 }
 .search {
   position: relative;
@@ -18,12 +23,13 @@
   width: 93%;
   height: 32px;
   padding-left: 20px;
-  border: 2px solid #7ba7ab;
+  border: 2px solid rgb(254, 155, 98);
 
   border-radius: 10px;
   outline: none;
-  background: #f9f0da;
-  color: black;
+  /* background: #f9f0da; */
+  background: rgb(19, 19, 19);
+  color: white;
   font-size: 16px;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   display: flex;
@@ -35,12 +41,12 @@
   width: 93%;
   height: 42px;
   padding-left: 20px;
-  border: 2px solid #7ba7ab;
+  border: 2px solid rgb(254, 155, 98);
 
   border-radius: 10px;
   outline: none;
-  background: #f9f0da;
-  color: black;
+  background: rgb(19, 19, 19);
+  color: white;
   font-size: 16px;
 }
 .search button {
@@ -51,14 +57,17 @@
   border-radius: 10px;
   cursor: pointer;
   outline: none;
-  background: rgb(178, 233, 120);
+  color: white;
+  background: rgb(254, 155, 98);
+  border: 2px solid rgb(254, 155, 98);
 }
 .search button:active {
   outline: none;
   background: rgb(131, 233, 21);
 }
 .search button:hover {
-  background: rgb(154, 232, 70);
+  background: rgb(32,32,32);
+  border: 2px solid rgb(254, 155, 98);
 }
 .search button:focus {
   outline: none;
@@ -68,6 +77,7 @@
   padding: 20px;
   /* border: 1px solid gray; */
   border-radius: 10px;
+  color: white;
 }
 .radio-field {
   display: flex;
@@ -89,8 +99,8 @@
   align-items: center;
 }
 .radio-fieldset {
-  border: 2px solid #7ba7ab;
-  background: #f9f0da;
+  border: 2px solid rgb(254, 155, 98);
+  background: rgb(19, 19, 19);
   border-radius: 10px;
   outline: none;
 }
