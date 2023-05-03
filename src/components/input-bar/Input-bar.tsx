@@ -41,7 +41,7 @@ function InputBar() {
     if (true) {
       setAnswerField('Loading...');
       axios
-        .post('exem', {
+        .post('https://fastapi-happyai.onrender.com/hello', {
           link: currentValue,
           company: companyValue,
           button: 0,
