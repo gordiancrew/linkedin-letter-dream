@@ -1,10 +1,12 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import './input-bar.css';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 function InputBar() {
-  const [radioValue, setRadioValue] = useState('company-linkedin');
+  const [radioValue, setRadioValue] = useState(1);
   const [currentValue, setCurrentValue] = useState('');
   const [companyValue, setCompanyValue] = useState('');
+
   const [answerField, setAnswerField] = useState('input desident and your company');
   function buttonHundler() {
     requestApi();
@@ -21,7 +23,7 @@ function InputBar() {
       e.preventDefault();
     }
   }
-  function chengeValue(val: string) {
+  function chengeValue(val: number) {
     setRadioValue(val);
   }
   // function isValidHttpUrl(str: string) {
@@ -38,19 +40,17 @@ function InputBar() {
   // }
 
   async function requestApi() {
-    if (true) {
-      setAnswerField('Loading...');
-      axios
-        .post('https://fastapi-happyai.onrender.com/hello', {
-          link: currentValue,
-          company: companyValue,
-          button: 0,
-        })
-        .then((response) => response.data)
-        .then((res) => setAnswerField(res.output_text));
-    } else {
-      setAnswerField('no valid destination  linkedin profile url');
-    }
+    setAnswerField('Loading...');
+
+    axios
+      .post('https://fastapi-happyai.onrender.com/hello', {
+        link: currentValue,
+        company: companyValue,
+        button: radioValue,
+      })
+      .then((response) => response.data)
+      .then((res) => setAnswerField(res.output_text));
+
     // https://www.linkedin.com/in/williamhgates/
   }
   return (
@@ -64,8 +64,8 @@ function InputBar() {
                   <input
                     type="radio"
                     name="radio"
-                    checked={radioValue === 'company-linkedin' ? true : false}
-                    onChange={() => chengeValue('company-linkedin')}
+                    checked={radioValue === 1 ? true : false}
+                    onChange={() => chengeValue(1)}
                   />
                   letter from profile linkedin
                 </label>
@@ -73,8 +73,8 @@ function InputBar() {
                   <input
                     type="radio"
                     name="radio"
-                    checked={radioValue === 'company-name' ? true : false}
-                    onChange={() => chengeValue('company-name')}
+                    checked={radioValue === 0 ? true : false}
+                    onChange={() => chengeValue(0)}
                   />
                   letter from description company
                 </label>
@@ -84,9 +84,9 @@ function InputBar() {
 
           <textarea
             className="search-area"
-            style={radioValue === 'company-name' ? { height: '300px' } : {}}
+            style={radioValue === 0 ? { height: '300px' } : {}}
             placeholder={
-              radioValue === 'company-linkedin'
+              radioValue === 1
                 ? 'input company profile linkedin '
                 : 'input description about company'
             }
