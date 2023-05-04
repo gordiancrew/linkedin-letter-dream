@@ -66,13 +66,16 @@ body {
   background: rgb(131, 233, 21);
 }
 .search button:hover {
-  background: rgb(32,32,32);
+  background: rgb(32, 32, 32);
   border: 2px solid rgb(254, 155, 98);
 }
 .search button:focus {
   outline: none;
 }
 .answerField {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
   margin-top: 40px;
   padding: 20px;
   /* border: 1px solid gray; */
@@ -103,4 +106,44 @@ body {
   background: rgb(19, 19, 19);
   border-radius: 10px;
   outline: none;
+}
+input[type='radio'],
+label {
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  position: relative;
+  height: 12px;
+  width: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+   /* border: 2px in rgb(254, 155, 98); */
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(19,19,19);
+  transform: translate(-50%, -50%);
+  visibility: visible;
 }
