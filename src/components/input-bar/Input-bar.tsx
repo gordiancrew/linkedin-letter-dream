@@ -109,9 +109,7 @@ function InputBar() {
           </button>
         </form>
       </div>
-      <div className="answerField">
-        <p>{answerField}</p>
-      </div>
+      <div className="answerField">{answerField}</div>
     </div>
   );
 }
