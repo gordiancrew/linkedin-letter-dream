@@ -7,7 +7,10 @@ function InputBar() {
   const [currentValue, setCurrentValue] = useState('');
   const [companyValue, setCompanyValue] = useState('');
 
-  const [answerField, setAnswerField] = useState('input desident and your company');
+  // const [answerField, setAnswerField] = useState(
+  //   'input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company  input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company '
+  // );
+  const [answerField, setAnswerField] = useState('');
   function buttonHundler() {
     requestApi();
   }
