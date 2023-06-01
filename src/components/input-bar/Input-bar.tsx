@@ -48,6 +48,9 @@ function InputBar() {
   async function requestApi() {
     //-------------------------------------------------------------
     setAnswerField('Loading...');
+    setTittleValue('Loading...');
+    setMailTextValue('Loading...');
+    setMailValue('Loading...');
 
     const response = await fetch('https://fastapi-happyai.onrender.com/hello', {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
