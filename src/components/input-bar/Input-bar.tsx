@@ -6,6 +6,9 @@ function InputBar() {
   const [radioValue, setRadioValue] = useState(1);
   const [currentValue, setCurrentValue] = useState('');
   const [companyValue, setCompanyValue] = useState('');
+  const [tittleValue, setTittleValue] = useState('');
+  const [mailTextValue, setMailTextValue] = useState('');
+  const [mailValue, setMailValue] = useState('');
 
   // const [answerField, setAnswerField] = useState(
   //   'input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company  input desident and your company input desident and your company input desident and your company input desident and your company input desident and your companyinput desident and your companyinput desident and your company '
@@ -43,6 +46,7 @@ function InputBar() {
   // }
 
   async function requestApi() {
+    //-------------------------------------------------------------
     setAnswerField('Loading...');
 
     const response = await fetch('https://fastapi-happyai.onrender.com/hello', {
@@ -66,8 +70,12 @@ function InputBar() {
     if (response.ok) {
       const data = await response.json();
       setAnswerField(data.output_text);
+      setTittleValue('The best letter');
+      setMailTextValue('Hello, please read our letter for you.');
+      setMailValue('example@gmail.com ');
     }
 
+    //----------------------------------------------------------------------
     // axios
     //   .post('https://fastapi-happyai.onrender.com/hello', {
     //     link: currentValue,
@@ -132,7 +140,26 @@ function InputBar() {
           </button>
         </form>
       </div>
-      <div className="answerField">{answerField}</div>
+      <div className="answerField-case">
+        <span className="tittle-case">TITTLE: </span>
+        {tittleValue}
+      </div>
+      <div className="answerField-case">
+        <span className="tittle-case">MAIL: </span>
+        {mailValue}
+      </div>
+      <div className="answerField-case">
+        <span className="tittle-case">MAIL TEXT: </span>
+        {mailTextValue}
+      </div>
+
+      <div className="answerField-case">
+        <div className="tittle-case">LETTER: </div>
+        {/* <React.Fragment>
+          <br />
+        </React.Fragment> */}
+        {answerField}
+      </div>
     </div>
   );
 }
