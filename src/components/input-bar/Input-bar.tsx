@@ -52,7 +52,7 @@ function InputBar() {
     setMailTextValue('Loading...');
     setMailValue('Loading...');
 
-    const response = await fetch('https://fastapi-happyai.onrender.com/hello', {
+    const response = await fetch('https://linkedin-letter-production.up.railway.app/hello', {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
