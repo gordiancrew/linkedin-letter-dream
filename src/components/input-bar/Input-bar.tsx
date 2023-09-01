@@ -96,8 +96,6 @@ function InputBar() {
         <form className="form-field">
           <fieldset className="radio-fieldset">
             <div className="radio-field-wrapper">
-              <div className="radio-field">
-              </div>
             </div>
           </fieldset>
 
