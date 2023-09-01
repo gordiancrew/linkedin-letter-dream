@@ -101,15 +101,6 @@ function InputBar() {
                   <input
                     type="radio"
                     name="radio"
-                    checked={radioValue === 1 ? true : false}
-                    onChange={() => chengeValue(1)}
-                  />
-                  letter from profile linkedin
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="radio"
                     checked={radioValue === 0 ? true : false}
                     onChange={() => chengeValue(0)}
                   />
