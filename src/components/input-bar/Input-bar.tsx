@@ -97,15 +97,6 @@ function InputBar() {
           <fieldset className="radio-fieldset">
             <div className="radio-field-wrapper">
               <div className="radio-field">
-                <label>
-                  <input
-                    type="radio"
-                    name="radio"
-                    checked={radioValue === 0 ? true : false}
-                    onChange={() => chengeValue(0)}
-                  />
-                  letter from description company
-                </label>
               </div>
             </div>
           </fieldset>
