@@ -112,7 +112,7 @@ function InputBar() {
 
           <textarea
             className="search-area"
-            style={radioValue === 0 ? { height: '300px' } : {}}
+            style={radioValue === 1 ? { height: '300px' } : {}}
             placeholder={
               radioValue === 1
                 ? 'input company profile linkedin '
