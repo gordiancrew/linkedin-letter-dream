@@ -94,9 +94,7 @@ function InputBar() {
     <div className="field">
       <div className="search">
         <form className="form-field">
-          <fieldset className="radio-fieldset">
-            
-          </fieldset>
+          
 
           <textarea
             className="search-area"
